@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Register</h2>
+        <form action="{% url 'register' %}" method="post">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              class="form-control" 
+              placeholder="Enter your username" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-control" 
+              placeholder="Enter your email" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-control" 
+              placeholder="Enter your password" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="telegramnumber" class="form-label">Telegram Number:</label>
+            <input 
+              type="number" 
+              id="telegramnumber" 
+              name="telegram" 
+              class="form-control" 
+              placeholder="Enter your Telegram number" 
+              required
+            >
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

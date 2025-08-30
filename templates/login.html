@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card shadow-lg p-4 rounded-4" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4">Login</h2>
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+</body>
+
+{% endblock %}
