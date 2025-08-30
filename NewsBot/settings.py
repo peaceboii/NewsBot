@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.versel.app', ]
+ALLOWED_HOSTS = ['.versel.app','newsbot-gzlm.onrender.com' ]
 
 
 # Application definition
