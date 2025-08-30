@@ -48,7 +48,7 @@ def logout_view(request):
     return render(request, "home.html")
 
 
-@login_required
+
 def home(request):
     topic = request.GET.get("q", "")
     topic_articles = {}
